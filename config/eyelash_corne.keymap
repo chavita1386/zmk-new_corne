@@ -105,7 +105,7 @@
             bindings = <
 &kp ESC    &kp Q         &kp W       &kp E      &kp R   &kp T                               &kp UP                &kp Y        &kp U   &kp I      &kp O       &kp P      &kp BSPC
 &hh 8 TAB  &hl RALT A    &hm LCTRL S &hm LGUI D &hh 5 F &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hh 6 J &hm LGUI K &hm LCTRL L &hh 7 SEMI &kp SQT
-&mo 2      &mt LSHIFT Z  &kp X       &kp C      &kp V   &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA   &kp DOT     &kp FSLH   &tog 1
+&mo 2      &mt LSHIFT Z  &kp X       &kp C      &kp V   &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA   &kp DOT     &mt RSHIFT SLASH   &tog 1
                             &kp PRINTSCREEN  &kp ESC  &kp ENTER                                               &kp SPACE  &kp BSPC  &kp RS(LA(LG(M)))
             >;
 
