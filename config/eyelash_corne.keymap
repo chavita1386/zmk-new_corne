@@ -35,6 +35,10 @@
 #define WIN_MAN 4
 #define VIM 5
 
+#define ZOOM_IN &kp LG(KP_PLUS)
+#define ZOOM_OUT &kp LG(KP_MINUS)
+
+
 / {
     behaviors {
         td0: td0 {
@@ -104,7 +108,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp ESC    &kp Q         &kp W       &kp E      &kp R   &kp T                               &kp UP                &kp Y        &kp U   &kp I      &kp O       &kp P      &kp BSPC
-&hh 8 TAB  &hl RALT A    &hm LCTRL S &hm LGUI D &hh 5 F &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hh 6 J &hm LGUI K &hm LCTRL L &hh 7 SEMI &kp SQT
+&hh 8 TAB  &hl RALT A    &hm LCTRL S &hm LGUI D &hh 5 F &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &hh 6 J &hm LGUI K &hm LCTRL L &hl RALT SEMI &kp SQT
 &mo 2      &mt LSHIFT Z  &kp X       &kp C      &kp V   &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA   &kp DOT     &mt RSHIFT SLASH   &tog 1
                             &kp PRINTSCREEN  &kp ESC  &kp ENTER                                               &kp SPACE  &kp BSPC  &kp RS(LA(LG(M)))
             >;
@@ -165,9 +169,9 @@
         vim_layer {
             display-name = "VIM";
             bindings = <
-&trans       &trans      &trans     &trans      &trans  &trans                      &kp F15                    &kp TILDE  &kp MINUS  &kp UNDER   &kp PIPE   &kp BACKSLASH  &kp CARET
+&trans       &trans      &trans     &trans      &trans  &trans                      &kp F15                         &kp TILDE  &kp MINUS  &kp UNDER   &kp PIPE   &kp BACKSLASH  &kp CARET
 &kp LA(TAB) &hl RALT A  &hm LCTRL S &hm LGUI D  &none   &none        &mmv MOVE_LEFT &mkp LCLK       &mmv MOVE_RIGHT &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp COLON      &kp DOUBLE_QUOTES
-&trans      &none       &none       &none       &none   &none &none                 &kp F14                  &kp SLASH  &kp EQUAL  &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION &none
+&trans      &none       &none       &none       &none   &none &none                 &kp F14                         &kp SLASH  &kp EQUAL  &kp LESS_THAN  &kp GREATER_THAN   &kp QUESTION &none
                                 &trans      &trans      &trans                                                                   &trans       &kp DELETE     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -177,8 +181,8 @@
         symbols_layer {
             display-name = "Symbols";
             bindings = <
-&trans      &kp EXCLAMATION &kp AT_SIGN &kp LPAR         &kp RPAR          &kp PERCENT                      &mmv MOVE_UP                &trans     &trans      &trans     &trans  &trans    &trans
-&kp LA(TAB) &kp AMPERSAND &kp DOLLAR  &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp ASTERISK        &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT &trans     &trans      &trans     &trans  &trans    &trans
+&trans      &kp EXCLAMATION &kp AT_SIGN &kp LPAR         &kp RPAR          &kp PERCENT                      &mmv MOVE_UP              &trans     &trans      &kp LG(N4) &kp LG(N5)  &trans    &trans
+&kp LA(TAB) &kp AMPERSAND &kp DOLLAR  &kp LEFT_BRACE   &kp RIGHT_BRACE   &kp ASTERISK        &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT &trans     &trans      ZOOM_IN    ZOOM_OUT  &trans    &trans
 &trans      &kp HASH      &kp GRAVE   &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS                       &mmv MOVE_DOWN                &trans     &trans      &trans     &trans  &trans    &trans
                 &trans      &trans      &trans                                                                   &trans       &trans     &trans
             >;
